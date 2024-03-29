@@ -4,7 +4,7 @@ import Options from './components/Options/Options';
 import DescriptionJSON from './components/Description/DescriptionJSON.json'
 import Description from './components/Description/Description';
 import '../src/App.css'
-
+import Notification from './components/Notification/Notification'
 
 const App = () => {
   const state = {
@@ -52,7 +52,7 @@ const totalFeedbackCount = totalMaker()
       {totalFeedbackCount ? <button className='btn' type="button" onClick={resetMaker}>Reset</button> : ""}
       </div>
 
-      {totalFeedbackCount ? <Feedbeck value={values} obj={state} total={totalFeedbackCount}/> : <p className="text">No feedbeck yet</p>}
+      {totalFeedbackCount ? <Feedbeck value={values} obj={state} total={totalFeedbackCount}/> : <Notification text={'No feedbeck yet'}/>}
     
     </div>
   );
