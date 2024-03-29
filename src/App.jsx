@@ -28,7 +28,7 @@ const App = () => {
 		});
 	};
 
-  function resetMaker(value){
+  function resetMaker(){
     setValues({
 			...state
 		});
@@ -52,7 +52,7 @@ const totalFeedbackCount = totalMaker()
       {totalFeedbackCount ? <button className='btn' type="button" onClick={resetMaker}>Reset</button> : ""}
       </div>
 
-      {totalFeedbackCount ? <Feedbeck value={values} obj={state} total={totalFeedbackCount}/> : <Notification text={'No feedbeck yet'}/>}
+      {totalFeedbackCount ? <Feedbeck value={values} obj={state} total={totalFeedbackCount}/> : <Notification text={'No feedback yet'}/>}
     
     </div>
   );
